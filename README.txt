@@ -37,7 +37,29 @@ Files in Scripts/ :
 			      datataframe with the top 300 features obtained by sorting the feature importances
 
 
-3. app.py - 
+3. app.py - Flask application which hosts the model to return predictions based on the data given as inout via a POST REST Call.
+The URL to make a POST request is http://127.0.0.1/users/EDNurse   -- (EDNurse is a registerd user for the application)
+Sample JSON message which can be used to send data to make a prediction : 
+{
+	"demographics": {
+		"name": "Tony",
+		"gender": "Male",
+		"age": 120,
+		"maritalstatus": "Married",
+		"insurance": "commercial"
+	},
+	"vitals": {
+		"heart_rate": 120,
+		"temperature": 110,
+		"oxygen_saturation": 20,
+		"respiration_rate": 106
+	},
+	"complaints": {
+		"cardiac_arrest": "True"
+	}
+}
+
+Sample response : Patient can be discharged with a 80% chance
 
 Files in models/:
 1. Xgb_reg.pkl- Pickled file of the optimal XGBoost model that gave the best results post hyperparameter tuning.
