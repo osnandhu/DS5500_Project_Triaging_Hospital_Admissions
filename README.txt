@@ -44,6 +44,7 @@ Files in models/:
 3. nn_opt_model.h5 - Keras optimal Neural Network model that gave the best results.
 
 Files in Result_data/
+The below mentioned files can be found at https://drive.google.com/open?id=17R8OzGAyifSpCyrUfKS7OIVvggTOzi_R link. For access email sundararajan.n@husky.neu.edu
 1. final_df - Pickled file in form of a dictionary of dataframes that can be used for model training. The optimised	
 	      dataframe was split as X_train,X_test in the ratio 80:20.Since the original data set was too large to be processed using a Non GPU based system, we dropped training data points in 3 options, keeping 70% , 60% and 50% of train rows. In this process, we didn't disturb test set at all. Test set contains all rows (20% of data) which were split from the original data set.
 				
