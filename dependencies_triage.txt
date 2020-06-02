@@ -10,3 +10,4 @@ xgboost
 tensorflow
 flask
 flask-restful
+json
