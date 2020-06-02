@@ -70,7 +70,7 @@ We have evaluated the best model based on the FBeta score (Beta = 2). Precision 
 AUC : 0.9208
 FBeta score: 0.9269
 Confusion Matrix: [[2981 10486]
-					[4665,73966]]  
+		   [4665,73966]]  
 
 
 
@@ -78,14 +78,14 @@ Confusion Matrix: [[2981 10486]
 AUC : 0.90422
 FBeta score: 0.9369
 Confusion Matrix: [[19395 14072]
-					[2851,75780]]  
+		   [2851,75780]]  
 
 
 2)The results of our best Neural Network model obtained post Hyperparameter tuning(no. of nodes in first layer = 60):
 AUC : 0.8108	
 FBeta score: 0.9203
 Confusion Matrix: [[23075 10392]
-					[5328,73303]]  
+		   [5328,73303]]  
 
 
 Thus, from the above results, we can see that the false negatives is significantly less in Random Forest when compared to the other models. We can also observe that there is a trade-off between AUC score and F-Beta score. Though the Random Forest's AUC score is less than that of the XGBoost, it performs better by significantly reducing the false negatives. Thus, our model wont misclassify a patient who is in a serious condition as 'Discharge'.
