@@ -88,7 +88,7 @@ Confusion Matrix: [[23075 10392]
 		   [5328,73303]]  
 
 
-Thus, from the above results, we can see that the false negatives is significantly less in Random Forest when compared to the other models. We can also observe that there is a trade-off between AUC score and F-Beta score. Though the Random Forest's AUC score is less than that of the XGBoost, it performs better by significantly reducing the false negatives. Thus, our model wont misclassify a patient who is in a serious condition as 'Discharge'.
+Thus, from the above results, we can see that the false negatives is significantly less in Random Forest when compared to the other models. We can also observe that there is a trade-off between AUC score and F-Beta score. Though the Random Forest's AUC score is less than that of the XGBoost, it performs better by significantly reducing the false negatives. Thus, the chances that our model will misclassify a patient who is in a serious condition as 'Discharge'is very low when compared to the other models.
 
 
 CITATIONS:
