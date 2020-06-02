@@ -13,7 +13,7 @@ Triage is performed by nurses after examining patients when they first arrive in
 	2. DISCHARGE - Those patients who require minimal medical assistance (Eg. Fever,Consultations)
 These assessments are done under time critical environments. Delayed triage is a huge liability risk for physicians and can directly be correlated with poorer patient outcomes.
 
-Thus we aim to apply machine learning  to ribustly triage incoming patients based on the available information and patient history.
+Thus we aim to apply machine learning  to robustly triage incoming patients based on the available information and patient history.
 Early identification of patients who are likely to require immediate admission may enable better optimization of hospital. Faster assessment and notification to administrators regarding potential admissions may help alleviate this problem.
 A patient's likelihood of admission may serve as a proxy for acuity, which is used in several downstream decisions such as bed placement and the need for emergency intervention.
 
@@ -29,25 +29,25 @@ This project requires the following software packages:
 
 Files in Scripts/ :
 1. Triage_script.ipynb - This is a notebook which has step by step implementation of preprocessing( EDA, Imputation.Dataset 
-				   reduced to ~560,486 x 743),memory reduction of the dataframe,Test and Train split up for model training (XGBoost, RandomForest),GridSearch for hyperparameter tuning to obtain the optimal models and calculation of feature importance.
+		         reduced to ~560,486 x 743),memory reduction of the dataframe,Test and Train split up for model training   (XGBoost, RandomForest),GridSearch for hyperparameter tuning to obtain the optimal models and calculation of feature importance.
 				   
 
 2. Neuralnets_triage.ipynb - This is a notebook where a neural model has been been trained on the preprocessed 	    
-							 datataframe with the top 300 features obtained by sorting the feature importances
+			      datataframe with the top 300 features obtained by sorting the feature importances
 
 
 3. app.py - 
 
-Files in models/
+Files in models/:
 1. Xgb_reg.pkl- Pickled file of the optimal XGBoost model that gave the best results post hyperparameter tuning.
 2. opt_rf_model - Pickled file of the optimal Random Forest model that gave the best results post hyperparameter tuning.
 3. nn_opt_model.h5 - Keras optimal Neural Network model that gave the best results.
 
 Files in Result_data/
 1. final_df - Pickled file in form of a dictionary of dataframes that can be used for model training. The optimised	
-			  dataframe was split as X_train,X_test in the ratio 80:20.Since the original data set was too large to be processed using a Non GPU based system, we dropped training data points in 3 options, keeping 70% , 60% and 50% of train rows. In this process, we didn't disturb test set at all. Test set contains all rows (20% of data) which were split from the original data set.
+	      dataframe was split as X_train,X_test in the ratio 80:20.Since the original data set was too large to be processed using a Non GPU based system, we dropped training data points in 3 options, keeping 70% , 60% and 50% of train rows. In this process, we didn't disturb test set at all. Test set contains all rows (20% of data) which were split from the original data set.
 				
-			 The intent of using test train split to drop data points was to ensure the distribution of positive and negative cases is still the same in each such combination of train data.
+The intent of using test train split to drop data points was to ensure the distribution of positive and negative cases is still the same in each such combination of train data.
 
 			 The final_df contains:
 			 a)X_train_a - 70% of X_train set is retained
@@ -60,7 +60,7 @@ Files in Result_data/
 			 h) Y_test - test set of the target variable 
 
 
-2. feature_imp.pkl - A pickle file which consists of the 743 features and their respective importances arranged in 							 descending order
+2. feature_imp.pkl - A pickle file which consists of the 743 features and their respective importances arranged in 					     descending order
 
 CONCLUSION:
 For robustly predicting the triage , we preprocessed the dataset and ran various classification models like XGBoost, Random Forest and a deep learning model. We did try running adaboost but since it cannot be parallelized, it took a lot of time or the time efficiency of the algorithm was very less when compared to XGBoost and RandomForest.
@@ -93,7 +93,7 @@ Thus, from the above results, we can see that the false negatives is significant
 
 CITATIONS:
 1. https://github.com/yaleemmlc/admissionprediction
-2.https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0201016
+2. https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0201016
 3. Medium.com
 4. TowardsDataScience.com
 5. https://www.kaggle.com/arjanso/reducing-dataframe-memory-size-by-65
