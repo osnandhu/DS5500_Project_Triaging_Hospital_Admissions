@@ -18,7 +18,8 @@ Early identification of patients who are likely to require immediate admission m
 A patient's likelihood of admission may serve as a proxy for acuity, which is used in several downstream decisions such as bed placement and the need for emergency intervention.
 
 DATASET:
-	1. Data/TriagingDataset.csv - It is a 560,486 x 972 dataframe. It is de-identified according to the norms. Save the dataframe in a local folder for exporting it in Jupyter Notebook for further analysis.
+The data and data description can be found in https://drive.google.com/drive/u/0/folders/1ICHMkj44u6SFJaZwZNOd2xqlvQo-OHKp . For access email sundararajan.n@husky.neu.edu
+1. TriagingDataset.csv - It is a 560,486 x 972 dataframe. It is de-identified according to the norms. Save the dataframe in a local folder for exporting it in Jupyter Notebook for further analysis.
 
 SETUP:
 This project requires the following software packages:
