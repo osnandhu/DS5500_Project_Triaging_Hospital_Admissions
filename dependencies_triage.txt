@@ -8,3 +8,5 @@ sklearn
 itertools
 xgboost
 tensorflow
+flask
+flask-restful
